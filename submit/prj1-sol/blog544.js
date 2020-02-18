@@ -281,6 +281,14 @@ errors.push(new BlogError('BAD_ID', 'users ' + obj.id +' referenced by commenter
         //console.log(ar.indexOf(obj.id));
          ar.splice(ar.indexOf(obj.id),1);
          this.articlesComments[this.data.comments[obj.id].articleId]=ar;
+
+
+         var ar1= this.userComments[this.data.comments[obj.id].commenterId];
+        //console.log(ar);
+        //console.log(ar.indexOf(obj.id));
+         ar1.splice(ar1.indexOf(obj.id),1);
+         this.userComments[this.data.comments[obj.id].commenterId]=ar;
+
          
          delete this.data.comments[obj.id];       
       }
