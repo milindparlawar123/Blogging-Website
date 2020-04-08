@@ -249,7 +249,7 @@ export default class Blog544 {
       }
     }
     //@TODO
-    console.log(errors);
+    //console.log(errors);
     if (errors.length > 0) throw errors;
   }
 
